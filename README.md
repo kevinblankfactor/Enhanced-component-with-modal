@@ -31,16 +31,16 @@ you want to enhance, the button that will be in your enhanced component, and the
 your preference. Then, use your enhanced component with your modal and all its necessary
 logic wherever you need it.
     
-    ```js
-    // index.js
-    // EnhancedComponent:
-    import ComponentToEnhance from "./ComponentToEnhance";
-    import CustomButton from "./CustomButton";
-    import CustomModal from "./CustomModal";
-    import withModal from "../withModal";
+```js
+// index.js
+// EnhancedComponent:
+import ComponentToEnhance from "./ComponentToEnhance";
+import CustomButton from "./CustomButton";
+import CustomModal from "./CustomModal";
+import withModal from "../withModal";
 
-    export default withModal(ComponentToEnhance, CustomButton, CustomModal);
-    ```
+export default withModal(ComponentToEnhance, CustomButton, CustomModal);
+```
 
 ### Requirements:
 
