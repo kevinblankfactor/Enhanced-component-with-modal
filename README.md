@@ -15,7 +15,7 @@ go back to the root directory of the project (type ***cd ..***) and type
 ***npm run ios*** in your terminal. If you did well, the Metro bundler will start building the app and then it will open your iOS simulator, install the app and run it.
 
 ### List of commands in order:
-
+    
     $ git clone https://github.com/Kevwas/Enhanced-component-with-modal.git
     $ cd Enhanced-component-with-modal
     $ npm install 
@@ -31,7 +31,7 @@ you want to enhance, the button that will be in your enhanced component, and the
 your preference. Then, use your enhanced component with your modal and all its necessary
 logic wherever you need it.
     
-    ```
+    ```js
     // index.js
     // EnhancedComponent:
     import ComponentToEnhance from "./ComponentToEnhance";
@@ -46,7 +46,7 @@ logic wherever you need it.
 
 **CustomButtom** needs to receive the "visible" boolean prop and the "callback" function to work.
     
-    ```
+    ```js
     // CustomButton.js
     // You can change the style of the CustomButtom to fit the requirements of your UI.
     // Make sure it receives the "visible" const and "callback" function through its props,
@@ -73,7 +73,7 @@ logic wherever you need it.
 
 **CustomModal** also needs to receive the "visible" boolean prop and the "callback" function to work.
     
-    ```
+    ```js
     // CustomModal.js
     // This an example of a Modal.
     // You can use any Modal you want to place in the EnhancedComponent, change its style
@@ -111,7 +111,8 @@ logic wherever you need it.
     ```
 
 **ComponentToEnhance** needs to receive the CustomButton as a prop to be able to open the modal.
-
+    
+    ```js
     // This is the component/screen you want to enhance with the modal.
     // Make sure it receives the CustomButtom component through props.
     // Place the Custom Button wherever you want in your component/screen.
@@ -137,7 +138,7 @@ logic wherever you need it.
 
 This is how your enhanced component will look like if you have everything in a single file.
     
-    ```
+    ```js
     // OneFileEnhancedComponent.js
     import React from "react";
     import { 
@@ -228,7 +229,7 @@ This is how your enhanced component will look like if you have everything in a s
 
 # App
     
-    ```
+    ```js
     import React from "react";
     import { StyleSheet, View } from "react-native";
     import EnhancedComponent from "./src/components/EnhancedComponent";
@@ -256,7 +257,7 @@ This is how your enhanced component will look like if you have everything in a s
 
 # Core: withModal.js
 
-    ```
+    ```js
     // withModal.js
     import React, { useState } from "react";
 
