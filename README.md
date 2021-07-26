@@ -15,14 +15,16 @@ go back to the root directory of the project (type ***cd ..***) and type
 ***npm run ios*** in your terminal. If you did well, the Metro bundler will start building the app and then it will open your iOS simulator, install the app and run it.
 
 ### List of commands in order:
-    
-    $ git clone https://github.com/Kevwas/Enhanced-component-with-modal.git
-    $ cd Enhanced-component-with-modal
-    $ npm install 
-    $ cd ios
-    $ pod install
-    $ cd ..
-    $ npm run ios
+
+```sh
+$ git clone https://github.com/Kevwas/Enhanced-component-with-modal.git
+$ cd Enhanced-component-with-modal
+$ npm install 
+$ cd ios
+$ pod install
+$ cd ..
+$ npm run ios
+```
 
 # Usage
 
