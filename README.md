@@ -17,13 +17,13 @@ go back to the root directory of the project (type ***cd ..***) and type
 ### List of commands in order:
 
 ```sh
-$ git clone https://github.com/Kevwas/Enhanced-component-with-modal.git
-$ cd Enhanced-component-with-modal
-$ npm install 
-$ cd ios
-$ pod install
-$ cd ..
-$ npm run ios
+git clone https://github.com/Kevwas/Enhanced-component-with-modal.git
+cd Enhanced-component-with-modal
+npm install 
+cd ios
+pod install
+cd ..
+npm run ios
 ```
 
 # Usage
