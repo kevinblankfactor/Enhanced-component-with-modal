@@ -30,7 +30,8 @@ Import the **withModal** HOC wherever you need it and export it passing it the c
 you want to enhance, the button that will be in your enhanced component, and the modal of
 your preference. Then, use your enhanced component with your modal and all its necessary
 logic wherever you need it.
-
+    
+    ```
     // index.js
     // EnhancedComponent:
     import ComponentToEnhance from "./ComponentToEnhance";
@@ -39,11 +40,13 @@ logic wherever you need it.
     import withModal from "../withModal";
 
     export default withModal(ComponentToEnhance, CustomButton, CustomModal);
+    ```
 
 ### Requirements:
 
 **CustomButtom** needs to receive the "visible" boolean prop and the "callback" function to work.
-
+    
+    ```
     // CustomButton.js
     // You can change the style of the CustomButtom to fit the requirements of your UI.
     // Make sure it receives the "visible" const and "callback" function through its props,
@@ -66,10 +69,11 @@ logic wherever you need it.
     );
 
     export default CustomButton;
-
+    ```
 
 **CustomModal** also needs to receive the "visible" boolean prop and the "callback" function to work.
-
+    
+    ```
     // CustomModal.js
     // This an example of a Modal.
     // You can use any Modal you want to place in the EnhancedComponent, change its style
@@ -104,7 +108,7 @@ logic wherever you need it.
     );
 
     export default CustomModal;
-
+    ```
 
 **ComponentToEnhance** needs to receive the CustomButton as a prop to be able to open the modal.
 
@@ -127,11 +131,13 @@ logic wherever you need it.
     );
 
     export default ComponentToEnhance;
+    ```
 
 # One-File Enhanced Component
 
 This is how your enhanced component will look like if you have everything in a single file.
-
+    
+    ```
     // OneFileEnhancedComponent.js
     import React from "react";
     import { 
@@ -218,9 +224,39 @@ This is how your enhanced component will look like if you have everything in a s
     );
 
     export default withModal(ComponentToEnhance, MyButton, CustomModal);
+    ```
+
+# App
+    
+    ```
+    import React from "react";
+    import { StyleSheet, View } from "react-native";
+    import EnhancedComponent from "./src/components/EnhancedComponent";
+    // import OneFileEnhancedComponent from "./src/components/OneFileEnhancedComponent"
+
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      },
+    });
+
+    const App = () => {
+      return (
+        <View style={styles.container}>
+          <EnhancedComponent />
+          {/* <OneFileEnhancedComponent /> */}
+        </View>
+      );
+    };
+
+    export default App;
+    ```
 
 # Core: withModal.js
 
+    ```
     // withModal.js
     import React, { useState } from "react";
 
@@ -243,6 +279,7 @@ This is how your enhanced component will look like if you have everything in a s
     }
 
     export default withModal;
+    ```
 
 # Diagram
 
